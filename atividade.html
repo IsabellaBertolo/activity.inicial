@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO IDADES</title>
+</head>
+<body>
+    <center>
+     <h1>Classificação por idade</h1>
+    <h2>Nome do Usuario</h2>
+  <input type="text" id="nomedapessoa">
+
+  <h2>Idade do Usuario</h2>
+  <input type="text" id="idadedapessoa">  
+    </center>
+
+<script>
+
+function idade(){
+
+var nome = document.getElementById('nomedapessoa').value;
+var idade =document.getElementById('idadedapessoa').value;
+console.log(nome);
+console.log(idade);
+
+
+
+if(idade <= 11) {
+
+    document.getElementById('resultado').innerText = "Olá " + nome + " essa é a idade de uma criança"; 
+
+}
+
+if(idade >=12 && idade <=20 ) {
+
+document.getElementById('resultado').innerText = "Olá " + nome + " essa é a idade de um Adolescente"; 
+
+}
+
+if(idade >=21 && idade <=65 ) {
+
+document.getElementById('resultado').innerText = "Olá " + nome + " essa é a idade de um Adulto"; 
+
+}
+
+if(idade >=65 ) {
+
+document.getElementById('resultado').innerText = "Olá " + nome + " essa é a idade de um Idoso " + idade + " anos de idade"; 
+
+}
+
+
+
+}
+
+</script>
+<center>
+<button onclick="idade()">Avaliar a Idade</button>
+<div>
+
+<p id="resultado">Resultado</p>
+
+</div>
+</center>
+<style>
+
+button{
+
+    background-color: rgb(255, 39, 125);
+    margin-top: 20px;
+}
+body{
+    background-color: rgb(255, 105, 190);
+}
+</style>
+
+
+</body>
+</html>
